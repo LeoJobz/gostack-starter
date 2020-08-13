@@ -1,38 +1,26 @@
-class List {
-    constructor() {
-        this.data = []
-    }
+    const arr = [1, 3, 4, 5, 6, 7]
 
-    add(data) {
-        this.data.push(data)
-        console.log(this.data)
-    }
-}
+    const newArr = arr.map(function(item, index){
+        return item + index
+    })
 
-class TodoList extends List {
-    constructor() {
-        super();
-        this.nome = 'Leo'
-    }
+    console.log(newArr)
 
-    mostraNome() {
-        console.log(this.nome)
-    }
-}
 
-var minhaLista = new TodoList();
+    const sum = arr.reduce(function(total, next){
+        return total + next
+    })
 
-document.getElementById('novotodo').onclick = function () {
-    minhaLista.add('novotodo')
-}
+    console.log(sum)
 
-minhaLista.mostraNome();
+    const filter = arr.filter(function(item) {
+        return item % 2 === 0
+    })
 
-//Static methods
-class Matematica {
-    static soma(a, b) {
-        return a + b
-    }
-}
+    console.log(filter)
 
-console.log(Matematica.soma(1,2))
+    const find = arr.find(function (item) {
+        return item === 4
+    })
+
+    console.log(find)
