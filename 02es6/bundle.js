@@ -1,53 +1,116 @@
+//----------------------------------------------------CLASSES----------------------------------------------------
+//#region 
+// class List {
+//     constructor() {
+//         this.data = []
+//     }
+//     add(data) {
+//         this.data.push(data)
+//         console.log(this.data)
+//     }
+// }
+// class TodoList extends List {
+//     constructor() {
+//         super();
+//         this.nome = 'Leo'
+//     }
+//     mostraNome() {
+//         console.log(this.nome)
+//     }
+// }
+// var minhaLista = new TodoList();
+// document.getElementById('novotodo').onclick = function () {
+//     minhaLista.add('novotodo')
+// }
+// minhaLista.mostraNome();
+// //Static methods
+// class Matematica {
+//     static soma(a, b) {
+//         return a + b
+//     }
+// }
+// console.log(Matematica.soma(1,2))
+//#endregion
+//----------------------------------------------------OPERAÇÕES EM ARRAY----------------------------------------------------
+//#region 
+// const arr = [1, 3, 4, 5, 6, 7]
+// const newArr = arr.map(function(item, index){
+//     return item + index
+// })
+// console.log(newArr)
+// const sum = arr.reduce(function(total, next){
+//     return total + next
+// })
+// console.log(sum)
+// const filter = arr.filter(function(item) {
+//     return item % 2 === 0
+// })
+// console.log(filter)
+// const find = arr.find(function (item) {
+//     return item === 4
+// })
+// console.log(find)
+//#endregion
+//----------------------------------------------------ARROW FUNCTION----------------------------------------------------
+//#region 
+// const arr = [1, 3, 4, 5, 6, 7]
+// const newArrUm = arr.map(function(item) {
+//     return item * 2
+// })
+// const newArrDois = arr.map(item => {
+//     return item * 2
+// })
+// const newArrTres = arr.map(item => item * 2)
+// console.log(newArrTres)
+// const teste = () => ({ nome: 'Leonardo '})
+// console.log(teste())
+//#endregion
+//----------------------------------------------------DESESTRUTURAÇÃO----------------------------------------------------
+//#region 
+// const usuario = {
+//     nome: 'Leonardo',
+//     idade: 23,
+//     endereco: {
+//         cidade: 'São Paulo',
+//         uf: 'SP'
+//     }
+// }
+// const { nome, idade, endereco: { cidade } } = usuario;
+// console.log(nome)
+// console.log(idade)
+// console.log(cidade)
+// function mostraNome({nome, idade}) {
+//     console.log(idade)
+// }
+// mostraNome(usuario)
+//#endregion
+//----------------------------------------------------OPERADORES REST/SPREAD----------------------------------------------------
+//#region 
+//REST
+// const arr = [0, 1, 2, 3, 4, 5]
+// const [ a, b, ...c ] = arr;
+// console.log(a)
+// console.log(b)
+// console.log(c)
+// function soma(...params) {
+//     return params.reduce((total, next) =>  total + next)
+// }
+// console.log(soma(1, 2, 3, 4, 5))
+// function somaDois(a, b, ...params) {
+//     return params
+// }
+// console.log(1, 2, 3, 4, 5, 6)
+// //SPREAD
+// const arr1 = [1, 2, 3]
+// const arr2 = [4, 5, 6]
+// const arr3 = [ ...arr1, ...arr2]
+// console.log(arr3)
+// const usuario1 = {
+//     nome: 'Leonardo',
+//     idade: 23,
+//     empresa: 'Bitwide'
+// }
+// const usuario2 = { ...usuario1, nome: 'Patrick' }
+// console.log(usuario2)
+//#endregion
 "use strict";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var arr = [0, 1, 2, 3, 4, 5];
-var a = arr[0],
-    b = arr[1],
-    c = arr.slice(2);
-console.log(a);
-console.log(b);
-console.log(c);
-
-function soma() {
-  for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
-    params[_key] = arguments[_key];
-  }
-
-  return params.reduce(function (total, next) {
-    return total + next;
-  });
-}
-
-console.log(soma(1, 2, 3, 4, 5));
-
-function somaDois(a, b) {
-  for (var _len2 = arguments.length, params = new Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-    params[_key2 - 2] = arguments[_key2];
-  }
-
-  return params;
-}
-
-console.log(1, 2, 3, 4, 5, 6); //SPREAD
-
-var arr1 = [1, 2, 3];
-var arr2 = [4, 5, 6];
-var arr3 = [].concat(arr1, arr2);
-console.log(arr3);
-var usuario1 = {
-  nome: 'Leonardo',
-  idade: 23,
-  empresa: 'Bitwide'
-};
-
-var usuario2 = _objectSpread(_objectSpread({}, usuario1), {}, {
-  nome: 'Patrick'
-});
-
-console.log(usuario2);
