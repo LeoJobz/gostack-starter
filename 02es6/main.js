@@ -1,26 +1,17 @@
     const arr = [1, 3, 4, 5, 6, 7]
 
-    const newArr = arr.map(function(item, index){
-        return item + index
+    const newArrUm = arr.map(function(item) {
+        return item * 2
     })
 
-    console.log(newArr)
-
-
-    const sum = arr.reduce(function(total, next){
-        return total + next
+    const newArrDois = arr.map(item => {
+        return item * 2
     })
 
-    console.log(sum)
+    const newArrTres = arr.map(item => item * 2)
 
-    const filter = arr.filter(function(item) {
-        return item % 2 === 0
-    })
+    console.log(newArrTres)
 
-    console.log(filter)
+    const teste = () => ({ nome: 'Leonardo '})
 
-    const find = arr.find(function (item) {
-        return item === 4
-    })
-
-    console.log(find)
+    console.log(teste())
