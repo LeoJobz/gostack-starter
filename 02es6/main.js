@@ -1,17 +1,23 @@
-    const arr = [1, 3, 4, 5, 6, 7]
+ 
+    const usuario = {
+        nome: 'Leonardo',
+        idade: 23,
+        endereco: {
+            cidade: 'São Paulo',
+            uf: 'SP'
+        }
+    }
 
-    const newArrUm = arr.map(function(item) {
-        return item * 2
-    })
 
-    const newArrDois = arr.map(item => {
-        return item * 2
-    })
+    const { nome, idade, endereco: { cidade } } = usuario;
 
-    const newArrTres = arr.map(item => item * 2)
+    console.log(nome)
+    console.log(idade)
+    console.log(cidade)
 
-    console.log(newArrTres)
 
-    const teste = () => ({ nome: 'Leonardo '})
+    function mostraNome({nome, idade}) {
+        console.log(idade)
+    }
 
-    console.log(teste())
+    mostraNome(usuario)

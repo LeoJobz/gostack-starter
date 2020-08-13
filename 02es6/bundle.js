@@ -1,21 +1,24 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 6, 7];
-var newArrUm = arr.map(function (item) {
-  return item * 2;
-});
-var newArrDois = arr.map(function (item) {
-  return item * 2;
-});
-var newArrTres = arr.map(function (item) {
-  return item * 2;
-});
-console.log(newArrTres);
-
-var teste = function teste() {
-  return {
-    nome: 'Leonardo '
-  };
+var usuario = {
+  nome: 'Leonardo',
+  idade: 23,
+  endereco: {
+    cidade: 'São Paulo',
+    uf: 'SP'
+  }
 };
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
 
-console.log(teste());
+function mostraNome(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(idade);
+}
+
+mostraNome(usuario);
