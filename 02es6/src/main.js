@@ -170,6 +170,4 @@
 // console.log(usuario2)
 //#endregion
 
-import { soma } from './funcoes'
-
-console.log(soma(1, 2))
+alert('testando')
