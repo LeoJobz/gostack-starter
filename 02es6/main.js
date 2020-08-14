@@ -1,171 +1,175 @@
 //----------------------------------------------------CLASSES----------------------------------------------------
 
 //#region 
-    // class List {
-    //     constructor() {
-    //         this.data = []
-    //     }
+// class List {
+//     constructor() {
+//         this.data = []
+//     }
 
-    //     add(data) {
-    //         this.data.push(data)
-    //         console.log(this.data)
-    //     }
-    // }
+//     add(data) {
+//         this.data.push(data)
+//         console.log(this.data)
+//     }
+// }
 
-    // class TodoList extends List {
-    //     constructor() {
-    //         super();
-    //         this.nome = 'Leo'
-    //     }
+// class TodoList extends List {
+//     constructor() {
+//         super();
+//         this.nome = 'Leo'
+//     }
 
-    //     mostraNome() {
-    //         console.log(this.nome)
-    //     }
-    // }
+//     mostraNome() {
+//         console.log(this.nome)
+//     }
+// }
 
-    // var minhaLista = new TodoList();
+// var minhaLista = new TodoList();
 
-    // document.getElementById('novotodo').onclick = function () {
-    //     minhaLista.add('novotodo')
-    // }
+// document.getElementById('novotodo').onclick = function () {
+//     minhaLista.add('novotodo')
+// }
 
-    // minhaLista.mostraNome();
+// minhaLista.mostraNome();
 
-    // //Static methods
-    // class Matematica {
-    //     static soma(a, b) {
-    //         return a + b
-    //     }
-    // }
+// //Static methods
+// class Matematica {
+//     static soma(a, b) {
+//         return a + b
+//     }
+// }
 
-    // console.log(Matematica.soma(1,2))
+// console.log(Matematica.soma(1,2))
 //#endregion
 
 
 //----------------------------------------------------OPERAÇÕES EM ARRAY----------------------------------------------------
 
 //#region 
-    // const arr = [1, 3, 4, 5, 6, 7]
+// const arr = [1, 3, 4, 5, 6, 7]
 
-    // const newArr = arr.map(function(item, index){
-    //     return item + index
-    // })
+// const newArr = arr.map(function(item, index){
+//     return item + index
+// })
 
-    // console.log(newArr)
+// console.log(newArr)
 
 
-    // const sum = arr.reduce(function(total, next){
-    //     return total + next
-    // })
+// const sum = arr.reduce(function(total, next){
+//     return total + next
+// })
 
-    // console.log(sum)
+// console.log(sum)
 
-    // const filter = arr.filter(function(item) {
-    //     return item % 2 === 0
-    // })
+// const filter = arr.filter(function(item) {
+//     return item % 2 === 0
+// })
 
-    // console.log(filter)
+// console.log(filter)
 
-    // const find = arr.find(function (item) {
-    //     return item === 4
-    // })
+// const find = arr.find(function (item) {
+//     return item === 4
+// })
 
-    // console.log(find)
+// console.log(find)
 //#endregion
 
 //----------------------------------------------------ARROW FUNCTION----------------------------------------------------
 
 //#region 
-    // const arr = [1, 3, 4, 5, 6, 7]
+// const arr = [1, 3, 4, 5, 6, 7]
 
-    // const newArrUm = arr.map(function(item) {
-    //     return item * 2
-    // })
+// const newArrUm = arr.map(function(item) {
+//     return item * 2
+// })
 
-    // const newArrDois = arr.map(item => {
-    //     return item * 2
-    // })
+// const newArrDois = arr.map(item => {
+//     return item * 2
+// })
 
-    // const newArrTres = arr.map(item => item * 2)
+// const newArrTres = arr.map(item => item * 2)
 
-    // console.log(newArrTres)
+// console.log(newArrTres)
 
-    // const teste = () => ({ nome: 'Leonardo '})
+// const teste = () => ({ nome: 'Leonardo '})
 
-    // console.log(teste())
+// console.log(teste())
 //#endregion
 
 
 //----------------------------------------------------DESESTRUTURAÇÃO----------------------------------------------------
 
 //#region 
-    // const usuario = {
-    //     nome: 'Leonardo',
-    //     idade: 23,
-    //     endereco: {
-    //         cidade: 'São Paulo',
-    //         uf: 'SP'
-    //     }
-    // }
+// const usuario = {
+//     nome: 'Leonardo',
+//     idade: 23,
+//     endereco: {
+//         cidade: 'São Paulo',
+//         uf: 'SP'
+//     }
+// }
 
 
-    // const { nome, idade, endereco: { cidade } } = usuario;
+// const { nome, idade, endereco: { cidade } } = usuario;
 
-    // console.log(nome)
-    // console.log(idade)
-    // console.log(cidade)
+// console.log(nome)
+// console.log(idade)
+// console.log(cidade)
 
 
-    // function mostraNome({nome, idade}) {
-    //     console.log(idade)
-    // }
+// function mostraNome({nome, idade}) {
+//     console.log(idade)
+// }
 
-    // mostraNome(usuario)
+// mostraNome(usuario)
 //#endregion
 
 //----------------------------------------------------OPERADORES REST/SPREAD----------------------------------------------------
 
 //#region 
 
-    //REST
-    
-    // const arr = [0, 1, 2, 3, 4, 5]
+// REST
 
-    // const [ a, b, ...c ] = arr;
+// const arr = [0, 1, 2, 3, 4, 5]
 
-    // console.log(a)
-    // console.log(b)
-    // console.log(c)
+// const [ a, b, ...c ] = arr;
 
-    // function soma(...params) {
-    //     return params.reduce((total, next) =>  total + next)
-    // }
+// console.log(a)
+// console.log(b)
+// console.log(c)
 
-    // console.log(soma(1, 2, 3, 4, 5))
+// function soma(...params) {
+//     return params.reduce((total, next) =>  total + next)
+// }
 
-    // function somaDois(a, b, ...params) {
-    //     return params
-    // }
+// console.log(soma(1, 2, 3, 4, 5))
 
-    // console.log(1, 2, 3, 4, 5, 6)
+// function somaDois(a, b, ...params) {
+//     return params
+// }
+
+// console.log(1, 2, 3, 4, 5, 6)
 
 
-    // //SPREAD
+//SPREAD
 
-    // const arr1 = [1, 2, 3]
-    // const arr2 = [4, 5, 6]
+// const arr1 = [1, 2, 3]
+// const arr2 = [4, 5, 6]
 
-    // const arr3 = [ ...arr1, ...arr2]
+// const arr3 = [ ...arr1, ...arr2]
 
-    // console.log(arr3)
+// console.log(arr3)
 
-    // const usuario1 = {
-    //     nome: 'Leonardo',
-    //     idade: 23,
-    //     empresa: 'Bitwide'
-    // }
+// const usuario1 = {
+//     nome: 'Leonardo',
+//     idade: 23,
+//     empresa: 'Bitwide'
+// }
 
-    // const usuario2 = { ...usuario1, nome: 'Patrick' }
+// const usuario2 = { ...usuario1, nome: 'Patrick' }
 
-    // console.log(usuario2)
+// console.log(usuario2)
 //#endregion
+
+import { soma } from './funcoes'
+
+console.log(soma(1, 2))
