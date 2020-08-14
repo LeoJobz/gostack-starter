@@ -170,19 +170,46 @@
 // console.log(usuario2)
 //#endregion
 
-import axios from 'axios'
 
-class Api {
-     static async getUserinfo(username) {
-         try {
-             const response = await axios.get(`https://api.github.com/users/${username}`)
-         } catch(err) {
-             console.warn('erro')
-         }
+//----------------------------------------------------ASYNC/AWAIT----------------------------------------------------
 
-        console.log(response)
-    }
-}
+//#region 
+    // const minhaPromise = () => new Promise((resolve, reject) => {
+    //     setTimeout(() => { resolve('OK') }, 2000)
+    // }) 
 
-Api.getUserinfo('leojobz')
+    // // async function executaPromise() {
+    // //     const response = await minhaPromise();
 
+    // //     console.log(response)
+    // // }
+
+    // const executaPromise = async () => {
+    //     console.log(await minhaPromise())
+    // }
+
+
+    // executaPromise()
+
+//#endregion
+
+
+//----------------------------------------------------CONFIG O AXIOS----------------------------------------------------
+
+//#region 
+    // import axios from 'axios'
+
+    // class Api {
+    //     static async getUserInfo(username) {
+    //         try {
+    //             const respnose = await axios.get(`https://api.github.com/users/${username}`)
+    //         } catch (err) {
+    //             console.warn('erro na requisição')
+    //         }
+
+    //         console.log(response)
+    //     }
+    // }
+
+    // Api.getUserInfo('leojobz')
+//#endregion
